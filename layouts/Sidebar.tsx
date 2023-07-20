@@ -1,15 +1,87 @@
+"use client";
 import { CornerTopRightIcon } from "@radix-ui/react-icons";
+import Link from "next/link";
 import React from "react";
+import { usePathname } from "next/navigation";
+
+const sidebarmenu = [
+  { name: "Accordion", path: "/components/accordion" },
+  { name: "Alert", path: "/components/alert" },
+  { name: "Alert Dialog", path: "/components/alert-dialog" },
+  { name: "Avatar", path: "/components/avatar" },
+  { name: "Badge", path: "/components/badge" },
+  { name: "Button", path: "/components/button" },
+  { name: "Calender", path: "/components/calender" },
+  { name: "Card", path: "/components/card" },
+  { name: "Checkbox", path: "/components/checkbox" },
+  { name: "Collapsible", path: "/components/collapsible" },
+  { name: "Combobox", path: "/components/combobox" },
+  { name: "Command", path: "/components/command" },
+  { name: "Context Menu", path: "/components/context-menu" },
+  { name: "Data Table", path: "/components/data-table" },
+  { name: "Date Picker", path: "/components/date-picker" },
+  { name: "Dialog", path: "/components/dialog" },
+  { name: "Dropdown Menu", path: "/components/dropdown-menu" },
+  { name: "Form", path: "/components/form" },
+  { name: "Hover Card", path: "/components/hover-card" },
+  { name: "Input", path: "/components/input" },
+  { name: "Label", path: "/components/label" },
+  { name: "Menubar", path: "/components/menubar" },
+  { name: "Navigation Menu", path: "/components/navigation-menu" },
+  { name: "Popover", path: "/components/popover" },
+  { name: "Progress", path: "/components/progress" },
+  { name: "Radio Group", path: "/components/radio-group" },
+  { name: "Scroll Area", path: "/components/scroll-area" },
+  { name: "Select", path: "/components/select" },
+  { name: "Separator", path: "/components/separator" },
+  { name: "Sheet", path: "/components/sheet" },
+  { name: "Skeleton", path: "/components/skeleton" },
+  { name: "Switch", path: "/components/switch" },
+  { name: "Table", path: "/components/table" },
+  { name: "Tabs", path: "/components/tabs" },
+  { name: "Textarea", path: "/components/textarea" },
+  { name: "Toast", path: "/components/toast" },
+  { name: "Toggle", path: "/components/toggle" },
+  { name: "Tooltip", path: "/components/tooltip" },
+  { name: "Typography", path: "/components/typography" },
+];
 
 const Sidebar = () => {
+  const pathname = usePathname();
+
   return (
-    <div className="w-72 h-screen border-r-2 border-dashed border-gray-200">
-      <div className="p-4">
-        <div className="bg-black rounded-md">
-          <CornerTopRightIcon className="text-white w-6 h-6" />
+    <div className="w-72 h-screen border-r-2 border-dashed border-gray-200 group overflow-hidden">
+      <div className="p-4 sticky top-0 z-50 bg-white">
+        <CornerTopRightIcon className="bg-black rounded-md text-white w-6 h-6" />
+      </div>
+      <div className="group-hover:overflow-y-auto">
+        <div className="px-4 py-4 h-[calc(100vh-80px)]">
+          <p className="text-black font-semibold text-base mb-1">Components</p>
+          <div className="flex">
+            <div className="border mr-3 border-gray-200"></div>
+            <div>
+              {sidebarmenu.map((item) => (
+                <Link href={item.path}>
+                  <div
+                    className={`${
+                      pathname === item.path
+                        ? "text-blue-950 font-semibold"
+                        : "text-gray-600"
+                    } relative text-sm py-1 cursor-pointer hover:text-gray-950`}
+                  >
+                    {item.name}
+                    <div
+                      className={`${
+                        pathname === item.path ? "block" : "hidden"
+                      } absolute border h-6 border-blue-950 -left-3.5 top-0 rounded transition-shadow duration-150`}
+                    ></div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
-      Sidebar
     </div>
   );
 };

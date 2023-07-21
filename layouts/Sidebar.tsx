@@ -10,6 +10,7 @@ const sidebarmenu = [
   { name: "Alert Dialog", path: "/components/alert-dialog" },
   { name: "Avatar", path: "/components/avatar" },
   { name: "Badge", path: "/components/badge" },
+  { name: "Breadcrumbs", path: "/components/breadcrumbs" },
   { name: "Button", path: "/components/button" },
   { name: "Calender", path: "/components/calender" },
   { name: "Card", path: "/components/card" },
@@ -50,11 +51,11 @@ const Sidebar = () => {
   const pathname = usePathname();
 
   return (
-    <div className="w-72 h-screen border-r-2 border-dashed border-gray-200 group overflow-hidden">
+    <div className="w-72 h-screen border-r-2  border-gray-200 group overflow-hidden">
       <div className="p-4 sticky top-0 z-50 bg-white">
         <CornerTopRightIcon className="bg-black rounded-md text-white w-6 h-6" />
       </div>
-      <div className="group-hover:overflow-y-auto">
+      <div className="overflow-y-auto">
         <div className="px-4 py-4 h-[calc(100vh-80px)]">
           <p className="text-black font-semibold text-base mb-1">Components</p>
           <div className="flex">

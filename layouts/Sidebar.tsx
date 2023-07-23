@@ -3,6 +3,7 @@ import { CornerTopRightIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import React from "react";
 import { usePathname } from "next/navigation";
+import { v4 as uuidv4 } from "uuid";
 
 const sidebarmenu = [
   { name: "Accordion", path: "/components/accordion" },
@@ -10,7 +11,7 @@ const sidebarmenu = [
   { name: "Alert Dialog", path: "/components/alert-dialog" },
   { name: "Avatar", path: "/components/avatar" },
   { name: "Badge", path: "/components/badge" },
-  { name: "Breadcrumbs", path: "/components/breadcrumbs" },
+  { name: "Breadcrumb", path: "/components/breadcrumb" },
   { name: "Button", path: "/components/button" },
   { name: "Calender", path: "/components/calender" },
   { name: "Card", path: "/components/card" },
@@ -62,7 +63,7 @@ const Sidebar = () => {
             <div className="border mr-3 border-gray-200"></div>
             <div>
               {sidebarmenu.map((item) => (
-                <Link href={item.path}>
+                <Link href={item.path} key={uuidv4()}>
                   <div
                     className={`${
                       pathname === item.path

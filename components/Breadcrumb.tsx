@@ -40,7 +40,6 @@ export interface BreadcrumbsItemType {
 export interface BreadcrumbsType {
   separator?: "arrow" | "slash";
   items: BreadcrumbsItemType[];
-  showInitialIcon: Boolean;
   initialIcon?: React.ReactNode;
 }
 

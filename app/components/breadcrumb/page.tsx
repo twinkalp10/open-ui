@@ -1,4 +1,5 @@
 import Breadcrumbs from "@/components/Breadcrumb";
+import TitleLayout from "@/components/TitleLayout";
 import React from "react";
 
 const Items = [
@@ -12,18 +13,19 @@ const Items = [
 const Page = () => {
   return (
     <div className="p-4">
-      <Breadcrumbs separator="arrow" items={Items} showInitialIcon={false} />
-      <div className="flex flex-col space-y-12 my-3">
-        {/* Heading */}
-        <div className="flex flex-col space-y-2">
-          <p className="text-4xl font-bold">Breadcrumbs</p>
-          <p className="text-gray-600">
-            Display breadcrumbs with slash or arrow separator with your chosen
-            Initial Icon.
-          </p>
-        </div>
+      <Breadcrumbs separator="arrow" items={Items} />
 
-        {/* Code */}
+      {/* Heading */}
+      <div className="mt-5">
+        <TitleLayout
+          title="BreadCrumbs"
+          subtitle="Display breadcrumbs with slash or arrow separator with your chosen
+        Initial Icon."
+        />
+      </div>
+
+      {/* Code */}
+      <div className="mt-5">
         <div>Code</div>
       </div>
     </div>

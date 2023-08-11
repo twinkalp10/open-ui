@@ -45,7 +45,6 @@ const sidebarmenu = [
   { name: "Toast", path: "/components/toast" },
   { name: "Toggle", path: "/components/toggle" },
   { name: "Tooltip", path: "/components/tooltip" },
-  { name: "Typography", path: "/components/typography" },
 ];
 
 const Sidebar = () => {

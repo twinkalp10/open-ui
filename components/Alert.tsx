@@ -108,23 +108,11 @@
 
 import * as React from "react";
 import * as AlertDialogPrimitive from "@radix-ui/react-alert-dialog";
-
-import { cn } from "@/lib/utils";
 import { VariantProps, cva } from "class-variance-authority";
 
 interface AlertDialogProps extends VariantProps<typeof AlertVariants> {
   icon?: React.ReactNode;
   iconcolor?: string;
-}
-
-interface AlertDialogDemoProps extends VariantProps<typeof AlertVariants> {
-  trigger: React.ReactNode;
-  cancelItem?: React.ReactNode;
-  actionItem?: React.ReactNode;
-  title: string;
-  description: string;
-  icon?: React.ReactNode;
-  iconColor?: string;
 }
 
 const AlertVariants = cva(
@@ -184,24 +172,26 @@ const AlertDialogTitle = React.forwardRef<
   React.ElementRef<typeof AlertDialogPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Title> &
     AlertDialogProps
->(({ size, children, icon, iconcolor, ...props }, ref) => (
-  <AlertDialogPrimitive.Title
-    ref={ref}
-    className={`flex gap-3 text-lg font-semibold`}
-    {...props}
-  >
-    <div className="flex justify-center items-center gap-3">
-      {icon && (
-        <div
-          className={`w-5 h-5 flex justify-center items-center ${iconcolor}`}
-        >
-          {icon}
-        </div>
-      )}
-      <div>{children}</div>
-    </div>
-  </AlertDialogPrimitive.Title>
-));
+>(({ children, icon, iconcolor, ...props }, ref) => {
+  return (
+    <AlertDialogPrimitive.Title
+      ref={ref}
+      className={`flex gap-3 text-lg font-semibold`}
+      {...props}
+    >
+      <div className="flex justify-center items-center gap-3">
+        {icon && (
+          <div
+            className={`w-5 h-5 flex justify-center items-center ${iconcolor}`}
+          >
+            {icon}
+          </div>
+        )}
+        <div>{children}</div>
+      </div>
+    </AlertDialogPrimitive.Title>
+  );
+});
 
 const AlertDialogDescription = React.forwardRef<
   React.ElementRef<typeof AlertDialogPrimitive.Description>,

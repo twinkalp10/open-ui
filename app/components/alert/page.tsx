@@ -53,15 +53,16 @@ import {
   AlertDialogHeader,
   AlertDialogFooter,
 } from "@/components/Alert";
+import { TrashIcon } from "@heroicons/react/24/solid";
 
-const page = () => {
+const Page = () => {
   return (
     <div>
       <AlertDialog>
         <AlertDialogTrigger>Open</AlertDialogTrigger>
         <AlertDialogContent size="rectangle">
           <AlertDialogHeader>
-            <AlertDialogTitle icon="true" iconcolor="text-red-500">
+            <AlertDialogTitle icon={<TrashIcon />} iconcolor="text-red-500">
               Are you absolutely sure?
             </AlertDialogTitle>
             <AlertDialogDescription>
@@ -79,4 +80,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

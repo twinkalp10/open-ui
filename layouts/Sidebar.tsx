@@ -8,7 +8,7 @@ import { v4 as uuidv4 } from "uuid";
 const sidebarmenu = [
   { name: "Accordion", path: "/components/accordion" },
   { name: "Alert", path: "/components/alert" },
-  { name: "Alert Dialog", path: "/components/alert-dialog" },
+  { name: "Alert Dialog", path: "/components/alertDialog" },
   { name: "Avatar", path: "/components/avatar" },
   { name: "Badge", path: "/components/badge" },
   { name: "Breadcrumb", path: "/components/breadcrumb" },

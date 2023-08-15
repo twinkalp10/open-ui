@@ -14,7 +14,7 @@ const Page = () => {
         container="circle"
         size="xl"
         indicator={
-          <DotFilledIcon className="text-red-500 w-4 h-4 bottom-[1px] left-10 absolute" />
+          <DotFilledIcon className="text-red-500 w-5 h-5 bottom-[5px] left-[42px] absolute" />
         }
       />
       <AvatarFallback>TP</AvatarFallback>

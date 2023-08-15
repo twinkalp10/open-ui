@@ -7,7 +7,7 @@ interface AvatarProps
   extends VariantProps<typeof avatarVariants>,
     VariantProps<typeof AvatarPrimitive.Image> {
   src: string;
-  indicator?: any;
+  indicator?: React.ReactNode;
 }
 
 const avatarVariants = cva("", {
@@ -46,34 +46,6 @@ const AvatarImage = React.forwardRef<ImageRef, AvatarProps>(
       size,
       container,
     });
-
-    // Calculate the indicator's position based on the image size
-    const indicatorPosition = `bottom-${
-      imageStyles.includes("h-6")
-        ? 0
-        : imageStyles.includes("h-8")
-        ? 0
-        : imageStyles.includes("h-10")
-        ? 0
-        : imageStyles.includes("h-12")
-        ? 1
-        : imageStyles.includes("h-14")
-        ? 1
-        : 1
-    } left-${
-      imageStyles.includes("w-6")
-        ? 4
-        : imageStyles.includes("w-8")
-        ? 5
-        : imageStyles.includes("w-10")
-        ? 7
-        : imageStyles.includes("w-12")
-        ? 10
-        : imageStyles.includes("w-14")
-        ? 10
-        : 10
-    }
-    `;
 
     return (
       <div className="relative">

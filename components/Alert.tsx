@@ -112,7 +112,6 @@ import { VariantProps, cva } from "class-variance-authority";
 
 interface AlertDialogProps extends VariantProps<typeof AlertVariants> {
   icon?: React.ReactNode;
-  iconcolor?: string;
 }
 
 const AlertVariants = cva(
@@ -172,7 +171,7 @@ const AlertDialogTitle = React.forwardRef<
   React.ElementRef<typeof AlertDialogPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Title> &
     AlertDialogProps
->(({ children, icon, iconcolor, ...props }, ref) => {
+>(({ children, icon, ...props }, ref) => {
   return (
     <AlertDialogPrimitive.Title
       ref={ref}
@@ -181,9 +180,7 @@ const AlertDialogTitle = React.forwardRef<
     >
       <div className="flex justify-center items-center gap-3">
         {icon && (
-          <div
-            className={`w-5 h-5 flex justify-center items-center ${iconcolor}`}
-          >
+          <div className={`w-5 h-5 flex justify-center items-center`}>
             {icon}
           </div>
         )}

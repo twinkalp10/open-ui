@@ -62,7 +62,7 @@ const Page = () => {
         <AlertDialogTrigger>Open</AlertDialogTrigger>
         <AlertDialogContent size="rectangle">
           <AlertDialogHeader>
-            <AlertDialogTitle icon={<TrashIcon />} iconcolor="text-red-500">
+            <AlertDialogTitle icon={<TrashIcon className="text-red-400" />}>
               Are you absolutely sure?
             </AlertDialogTitle>
             <AlertDialogDescription>

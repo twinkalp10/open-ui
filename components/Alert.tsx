@@ -37,8 +37,12 @@ const Alert = React.forwardRef<
       className={`relative py-2 px-4 ${alertVariants({ container, variant })}`}
       {...props}
     >
-      <div className="flex justify-between items-center">
-        {icon && <div className={`h-5 w-5`}>{icon}</div>}
+      <div className="flex items-center">
+        {icon ? (
+          <div className={`h-5 w-5 mr-auto`}>{icon}</div>
+        ) : (
+          <div className={`h-5 w-5 mr-auto`}></div>
+        )}
         <XMarkIcon className={`h-4 w-4`} />
       </div>
 

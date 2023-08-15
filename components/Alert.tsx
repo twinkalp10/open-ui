@@ -92,4 +92,6 @@ const AlertFooter = React.forwardRef<
   );
 });
 
+AlertFooter.displayName = "AlertFooter";
+
 export { Alert, AlertTitle, AlertDescription, AlertFooter };

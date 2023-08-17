@@ -38,6 +38,7 @@ const sidebarmenu = [
   { name: "Separator", path: "/components/separator" },
   { name: "Sheet", path: "/components/sheet" },
   { name: "Skeleton", path: "/components/skeleton" },
+  { name: "Slider", path: "/components/slider" },
   { name: "Switch", path: "/components/switch" },
   { name: "Table", path: "/components/table" },
   { name: "Tabs", path: "/components/tabs" },

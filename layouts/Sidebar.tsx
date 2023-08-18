@@ -32,7 +32,7 @@ const sidebarmenu = [
   { name: "Navigation Menu", path: "/components/navigation-menu" },
   { name: "Popover", path: "/components/popover" },
   { name: "Progress", path: "/components/progress" },
-  { name: "Radio Group", path: "/components/radio-group" },
+  { name: "Radio Group", path: "/components/radioGroup" },
   { name: "Scroll Area", path: "/components/scroll-area" },
   { name: "Select", path: "/components/select" },
   { name: "Separator", path: "/components/separator" },

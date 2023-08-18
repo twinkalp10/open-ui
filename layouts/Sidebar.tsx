@@ -23,7 +23,7 @@ const sidebarmenu = [
   { name: "Data Table", path: "/components/data-table" },
   { name: "Date Picker", path: "/components/date-picker" },
   { name: "Dialog", path: "/components/dialog" },
-  { name: "Dropdown Menu", path: "/components/dropdown-menu" },
+  { name: "Dropdown Menu", path: "/components/dropdownMenu" },
   { name: "Form", path: "/components/form" },
   { name: "Hover Card", path: "/components/hover-card" },
   { name: "Input", path: "/components/input" },

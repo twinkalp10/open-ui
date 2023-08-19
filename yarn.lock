@@ -266,7 +266,7 @@
     "@radix-ui/react-use-previous" "1.0.1"
     "@radix-ui/react-use-size" "1.0.1"
 
-"@radix-ui/react-collapsible@1.0.3":
+"@radix-ui/react-collapsible@^1.0.3", "@radix-ui/react-collapsible@1.0.3":
   "integrity" "sha512-UBmVDkmR6IvDsloHVN+3rtx4Mi5TFvylYXpluuv0f37dtaz3H99bp8No0LGXRigVpl3UAT4l9j6bIchh42S/Gg=="
   "resolved" "https://registry.npmjs.org/@radix-ui/react-collapsible/-/react-collapsible-1.0.3.tgz"
   "version" "1.0.3"

@@ -1,4 +1,5 @@
 import React from "react";
+import Badge from "./Badge";
 
 const TitleLayout = ({ title, subtitle }: TitleLayoutType) => {
   return (

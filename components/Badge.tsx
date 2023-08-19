@@ -1,5 +1,6 @@
 import React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "@/lib/utils";
 
 const badge = cva(
   `inline-flex items-center rounded-full border font-semibold`,
@@ -22,13 +23,23 @@ const badge = cva(
   }
 );
 
-const Badge = ({ label, color, background_color, size, type }: BadgeType) => {
+const Badge = ({
+  label,
+  color = "text-gray-800",
+  background_color,
+  size,
+  type,
+  className,
+}: BadgeType) => {
   return (
     <div
-      className={`${badge({
-        size,
-        type,
-      })} ${color} ${background_color}`}
+      className={cn(
+        `${badge({
+          size,
+          type,
+        })} ${color} ${background_color}`,
+        className
+      )}
     >
       <div>{label}</div>
     </div>
@@ -37,8 +48,10 @@ const Badge = ({ label, color, background_color, size, type }: BadgeType) => {
 
 export default Badge;
 
-interface BadgeType extends VariantProps<typeof badge> {
+interface BadgeType
+  extends VariantProps<typeof badge>,
+    React.HTMLAttributes<HTMLDivElement> {
   label: string;
-  color: string;
+  color?: string;
   background_color: string;
 }

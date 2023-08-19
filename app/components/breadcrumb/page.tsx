@@ -1,4 +1,7 @@
+import APIRefLayout from "@/components/APIRefLayout";
 import Breadcrumbs from "@/components/Breadcrumb";
+import CodeBlock from "@/components/CodeLayout";
+import PreviewLayout from "@/components/PreviewLayout";
 import TitleLayout from "@/components/TitleLayout";
 import React from "react";
 
@@ -9,6 +12,29 @@ const Items = [
     path: "/components/breadcrumb",
   },
 ];
+
+const code = `
+import React from 'react';
+import Breadcrumbs from "@/components/Breadcrumb";
+
+const Items = [
+  { label: "Home", path: "/" },
+  {
+    label: "Breadcrumb",
+    path: "/components/breadcrumb",
+  },
+];
+
+const App = () => {
+  return (
+    <div>
+      <Breadcrumbs separator="arrow" items={Items} />
+    </div>
+    );
+  };
+
+export default App;
+  `;
 
 const Page = () => {
   return (
@@ -24,10 +50,24 @@ const Page = () => {
         />
       </div>
 
+      {/* API Reference */}
+
+      {/* Example */}
+      <PreviewLayout>
+        <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-1">
+            <p className="text-gray-600 text-sm">With arrow separator</p>
+            <Breadcrumbs separator="arrow" items={Items} />
+          </div>
+          <div className="flex flex-col gap-1">
+            <p className="text-gray-600 text-sm">With slash separator</p>
+            <Breadcrumbs separator="slash" items={Items} />
+          </div>
+        </div>
+      </PreviewLayout>
+
       {/* Code */}
-      <div className="mt-5">
-        <div>Code</div>
-      </div>
+      <CodeBlock code={code} />
     </div>
   );
 };

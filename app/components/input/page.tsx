@@ -16,6 +16,7 @@ const Page = () => {
       <Label htmlFor="email">Email</Label>
       <Input
         placeholder="Email"
+        className="w-80"
         icon={
           <TooltipProvider>
             <Tooltip>

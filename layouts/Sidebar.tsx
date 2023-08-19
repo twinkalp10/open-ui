@@ -25,7 +25,7 @@ const sidebarmenu = [
   { name: "Dialog", path: "/components/dialog" },
   { name: "Dropdown Menu", path: "/components/dropdownMenu" },
   { name: "Form", path: "/components/form" },
-  { name: "Hover Card", path: "/components/hover-card" },
+  { name: "Hover Card", path: "/components/hoverCard" },
   { name: "Input", path: "/components/input" },
   { name: "Label", path: "/components/label" },
   { name: "Menubar", path: "/components/menubar" },

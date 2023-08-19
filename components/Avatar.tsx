@@ -3,13 +3,6 @@ import React from "react";
 import * as AvatarPrimitive from "@radix-ui/react-avatar";
 import { VariantProps, cva } from "class-variance-authority";
 
-interface AvatarProps
-  extends VariantProps<typeof avatarVariants>,
-    VariantProps<typeof AvatarPrimitive.Image> {
-  src: string;
-  indicator?: React.ReactNode;
-}
-
 const avatarVariants = cva("", {
   variants: {
     size: {
@@ -29,6 +22,12 @@ const avatarVariants = cva("", {
     container: "circle",
   },
 });
+interface AvatarProps
+  extends VariantProps<typeof avatarVariants>,
+    VariantProps<typeof AvatarPrimitive.Image> {
+  src: string;
+  indicator?: React.ReactNode;
+}
 
 const AvatarRoot = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Root>,
@@ -79,13 +78,4 @@ const AvatarFallback = React.forwardRef<
 ));
 AvatarFallback.displayName = AvatarPrimitive.Fallback.displayName;
 
-const Avatar = ({ src, indicator }: AvatarProps) => {
-  return (
-    <AvatarRoot>
-      <AvatarImage src={src} indicator={indicator} />
-      <AvatarFallback />
-    </AvatarRoot>
-  );
-};
-
-export { AvatarRoot, AvatarImage, AvatarFallback, Avatar };
+export { AvatarRoot, AvatarImage, AvatarFallback };

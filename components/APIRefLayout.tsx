@@ -7,13 +7,12 @@ interface APIRefLayoutType {
 
 const APIRefLayout = ({ APIref }: APIRefLayoutType) => {
   return (
-    <a href={APIref} target="_blank" className="w-[124px]">
+    <a href={APIref} target="_blank" className="w-[124px] mt-5">
       <Badge
         size="md"
         background_color="bg-violet-100"
         label="API Reference"
         type="pill"
-        className="mt-2"
       />
     </a>
   );

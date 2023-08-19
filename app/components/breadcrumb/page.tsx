@@ -66,6 +66,8 @@ const Page = () => {
         </div>
       </PreviewLayout>
 
+      {/* Dependencies */}
+
       {/* Code */}
       <CodeBlock code={code} />
     </div>

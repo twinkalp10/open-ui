@@ -1,6 +1,7 @@
 import { VariantProps, cva } from "class-variance-authority";
 import { XMarkIcon } from "@heroicons/react/24/solid";
 import React from "react";
+import { cn } from "@/lib/utils";
 
 const alertVariants = cva("border rounded-xl shadow-sm", {
   variants: {
@@ -12,8 +13,8 @@ const alertVariants = cva("border rounded-xl shadow-sm", {
       warning: "border-yellow-300 text-yellow-700 bg-yellow-50",
     },
     container: {
-      rectangle: "max-w-[1216px] min-h-[108px]",
-      square: "max-w-[343px] min-h-[180px]",
+      rectangle: "max-w-[900px] min-h-[108px]",
+      square: "max-w-[343px] min-h-[120px]",
     },
   },
   defaultVariants: {
@@ -29,12 +30,15 @@ interface AlertProps extends VariantProps<typeof alertVariants> {
 const Alert = React.forwardRef<
   HTMLDivElement,
   React.AllHTMLAttributes<HTMLDivElement> & AlertProps
->(({ icon, children, container, variant, ...props }, ref) => {
+>(({ icon, children, container, variant, className, ...props }, ref) => {
   return (
     <div
       role="alert"
       ref={ref}
-      className={`relative py-2 px-4 ${alertVariants({ container, variant })}`}
+      className={cn(
+        `relative py-2 px-4 ${alertVariants({ container, variant })}`,
+        className
+      )}
       {...props}
     >
       <div className="flex items-center">
@@ -77,21 +81,4 @@ const AlertDescription = React.forwardRef<
 
 AlertDescription.displayName = "AlertDescription";
 
-const AlertFooter = React.forwardRef<
-  HTMLDivElement,
-  React.AllHTMLAttributes<HTMLDivElement> & AlertProps
->(({ children, ...props }, ref) => {
-  return (
-    <div
-      ref={ref}
-      className="flex justify-start items-center gap-3 mt-5"
-      {...props}
-    >
-      {children}
-    </div>
-  );
-});
-
-AlertFooter.displayName = "AlertFooter";
-
-export { Alert, AlertTitle, AlertDescription, AlertFooter };
+export { Alert, AlertTitle, AlertDescription };

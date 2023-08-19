@@ -27,30 +27,33 @@ const AccordionTrigger = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger> &
     AccordionProps
->(({ className, children, iconPosition = "right", ...props }, ref) => (
-  <AccordionPrimitive.Header className="flex">
-    <AccordionPrimitive.Trigger
-      ref={ref}
-      className={cn(
-        "flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180",
-        className
-      )}
-      {...props}
-    >
-      {iconPosition === "left" ? (
-        <div className="flex items-center gap-4">
-          <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
-          <div>{children}</div>
-        </div>
-      ) : (
-        <>
-          {children}
-          <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
-        </>
-      )}
-    </AccordionPrimitive.Trigger>
-  </AccordionPrimitive.Header>
-));
+>(({ className, children, iconPosition, ...props }, ref) => {
+  return (
+    <AccordionPrimitive.Header className="flex">
+      <AccordionPrimitive.Trigger
+        ref={ref}
+        className={cn(
+          "flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180",
+
+          className
+        )}
+        {...props}
+      >
+        {iconPosition === "left" ? (
+          <div className="flex items-center gap-4">
+            <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
+            <div>{children}</div>
+          </div>
+        ) : (
+          <>
+            {children}
+            <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200 " />
+          </>
+        )}
+      </AccordionPrimitive.Trigger>
+    </AccordionPrimitive.Header>
+  );
+});
 AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
 
 const AccordionContent = React.forwardRef<

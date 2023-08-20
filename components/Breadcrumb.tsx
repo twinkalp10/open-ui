@@ -73,7 +73,10 @@ const Crumbs = ({
   return (
     <>
       {showInitialSeparator && separatorIcon}
-      <Link className={`${heightLight && "font-bold"}`} href={item.path}>
+      <Link
+        className={`${heightLight && "font-bold"} text-base`}
+        href={item.path}
+      >
         {item.label}
       </Link>
       {!heightLight && separatorIcon}

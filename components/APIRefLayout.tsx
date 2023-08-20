@@ -11,9 +11,9 @@ const APIRefLayout = ({ APIref }: APIRefLayoutType) => {
       <a href={APIref} target="_blank" className="w-[124px]">
         <Badge
           size="md"
-          background_color="bg-violet-100"
           label="API Reference"
-          type="pill"
+          container="pill"
+          className="text-gray-800 bg-violet-200"
         />
       </a>
     </div>

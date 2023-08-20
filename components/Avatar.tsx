@@ -2,6 +2,7 @@
 import React from "react";
 import * as AvatarPrimitive from "@radix-ui/react-avatar";
 import { VariantProps, cva } from "class-variance-authority";
+import { cn } from "@/lib/utils";
 
 const avatarVariants = cva("", {
   variants: {
@@ -22,9 +23,7 @@ const avatarVariants = cva("", {
     container: "circle",
   },
 });
-interface AvatarProps
-  extends VariantProps<typeof avatarVariants>,
-    VariantProps<typeof AvatarPrimitive.Image> {
+interface AvatarProps extends VariantProps<typeof avatarVariants> {
   src: string;
   indicator?: React.ReactNode;
 }
@@ -32,37 +31,43 @@ interface AvatarProps
 const AvatarRoot = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root>
->(({ ...props }, ref) => (
-  <AvatarPrimitive.Root ref={ref} className="relative" {...props} />
+>(({ className, ...props }, ref) => (
+  <AvatarPrimitive.Root
+    ref={ref}
+    className={cn("relative", className)}
+    {...props}
+  />
 ));
 AvatarRoot.displayName = AvatarPrimitive.Root.displayName;
 
-type ImageRef = React.ElementRef<typeof AvatarPrimitive.Image>;
+const AvatarImage = React.forwardRef<
+  React.ElementRef<typeof AvatarPrimitive.Image>,
+  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image> & AvatarProps
+>(({ size, className, container, indicator, src, ...props }, ref) => {
+  const imageStyles = avatarVariants({
+    size,
+    container,
+  });
 
-const AvatarImage = React.forwardRef<ImageRef, AvatarProps>(
-  ({ size, container, indicator, src, ...props }, ref) => {
-    const imageStyles = avatarVariants({
-      size,
-      container,
-    });
-
-    return (
-      <div className="relative">
-        <AvatarPrimitive.Image
-          ref={ref}
-          src={src}
-          className={`${imageStyles} flex items-center justify-center`}
-          {...props}
-        />
-        {indicator && (
-          <div className={`flex justify-center items-center z-50`}>
-            {indicator}
-          </div>
+  return (
+    <div className="relative">
+      <AvatarPrimitive.Image
+        ref={ref}
+        src={src}
+        className={cn(
+          `${imageStyles} flex items-center justify-center`,
+          className
         )}
-      </div>
-    );
-  }
-);
+        {...props}
+      />
+      {indicator && (
+        <div className={`flex justify-center items-center z-50`}>
+          {indicator}
+        </div>
+      )}
+    </div>
+  );
+});
 
 AvatarImage.displayName = AvatarPrimitive.Image.displayName;
 

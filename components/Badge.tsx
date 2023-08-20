@@ -7,37 +7,30 @@ const badge = cva(
   {
     variants: {
       size: {
-        sm: "py-0.5 px-2 text-xs",
-        md: "py-0.5 px-2.5 text-sm",
-        lg: "py-1 px-3 text-base",
+        sm: "py-1 px-2 text-xs",
+        md: "py-1 px-3 text-sm",
+        lg: "py-1 px-4 text-base",
       },
-      type: {
+      container: {
         pill: "rounded-2xl",
-        box: "rounded-lg",
+        box: "rounded-md",
       },
     },
     defaultVariants: {
       size: "md",
-      type: "pill",
+      container: "pill",
     },
   }
 );
 
-const Badge = ({
-  label,
-  color = "text-gray-800",
-  background_color,
-  size,
-  type,
-  className,
-}: BadgeType) => {
+const Badge = ({ label, size, container, className }: BadgeType) => {
   return (
     <div
       className={cn(
         `${badge({
           size,
-          type,
-        })} ${color} ${background_color}`,
+          container,
+        })}`,
         className
       )}
     >
@@ -52,6 +45,4 @@ interface BadgeType
   extends VariantProps<typeof badge>,
     React.HTMLAttributes<HTMLDivElement> {
   label: string;
-  color?: string;
-  background_color: string;
 }

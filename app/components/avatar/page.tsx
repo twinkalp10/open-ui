@@ -76,6 +76,7 @@ const Page = () => {
               />
               <AvatarFallback>TP</AvatarFallback>
             </AvatarRoot>
+
             <AvatarRoot>
               <AvatarImage
                 src={avatarSrc}
@@ -87,6 +88,7 @@ const Page = () => {
               />
               <AvatarFallback>TP</AvatarFallback>
             </AvatarRoot>
+
             <AvatarRoot>
               <AvatarImage
                 src={avatarSrc}
@@ -98,6 +100,7 @@ const Page = () => {
               />
               <AvatarFallback>TP</AvatarFallback>
             </AvatarRoot>
+
             <AvatarRoot>
               <AvatarImage
                 src={avatarSrc}

@@ -8,13 +8,27 @@ const Card = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "rounded-lg border bg-transparent text-gray-800 shadow-sm",
+      "relative rounded-lg border bg-transparent text-gray-800 shadow-sm",
       className
     )}
     {...props}
-  />
+  >
+    {props.children}
+  </div>
 ));
 Card.displayName = "Card";
+
+const CardIcon = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn("absolute top-2 right-2", className)}
+    {...props}
+  />
+));
+CardIcon.displayName = "CardIcon";
 
 const CardHeader = React.forwardRef<
   HTMLDivElement,
@@ -22,7 +36,7 @@ const CardHeader = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("flex flex-col space-y-1.5 p-6", className)}
+    className={cn("flex flex-col space-y-1 p-6", className)}
     {...props}
   />
 ));
@@ -74,6 +88,7 @@ CardFooter.displayName = "CardFooter";
 export {
   Card,
   CardHeader,
+  CardIcon,
   CardFooter,
   CardTitle,
   CardDescription,

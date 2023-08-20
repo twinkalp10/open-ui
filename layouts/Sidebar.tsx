@@ -52,7 +52,7 @@ const Sidebar = () => {
   const pathname = usePathname();
 
   return (
-    <div className="w-72 h-screen border-r-2  border-gray-200 group overflow-hidden">
+    <div className="w-72 h-auto border-r-2  border-gray-200 group overflow-hidden">
       <div className="p-4 sticky top-0 z-50 bg-white">
         <CornerTopRightIcon className="bg-black rounded-md text-white w-6 h-6" />
       </div>

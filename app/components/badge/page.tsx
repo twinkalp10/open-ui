@@ -126,17 +126,19 @@ const Page = () => {
               </div>
             </TabsContent>
             <TabsContent value="code">
-              <SyntaxHighlighter
-                language="jsx"
-                style={dracula}
-                customStyle={{
-                  height: "350px",
-                  width: "800px",
-                  overflow: "auto",
-                }}
-              >
-                {previewCode}
-              </SyntaxHighlighter>
+              <div className="w-72 md:w-[900px] sm:w-64 max-w-[600px]">
+                <SyntaxHighlighter
+                  language="jsx"
+                  style={dracula}
+                  customStyle={{
+                    maxHeight: "400px",
+                    overflowY: "auto",
+                    overflowX: "auto",
+                  }}
+                >
+                  {previewCode}
+                </SyntaxHighlighter>
+              </div>
             </TabsContent>
           </div>
         </Tabs>

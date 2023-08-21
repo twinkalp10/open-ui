@@ -70,9 +70,10 @@ const CircularProgress = React.forwardRef<
       )}
       {...props}
     >
-      <svg className={`${circularVariants({ size })}`}>
-        <style>
-          {`
+      <ProgressPrimitive.Indicator>
+        <svg className={`${circularVariants({ size })}`}>
+          <style>
+            {`
             .circle-background {
               fill: none;
               stroke: #e6e6e6;
@@ -86,17 +87,18 @@ const CircularProgress = React.forwardRef<
               transition:strokeDashoffset  0.3s ease;
             }
           `}
-        </style>
-        <circle className="circle-background" cx="50%" cy="50%" r={radius} />
-        <circle
-          className="circle-progress"
-          cx="50%"
-          cy="50%"
-          r={radius}
-          strokeDasharray={circumference}
-          strokeDashoffset={dashoffset}
-        />
-      </svg>
+          </style>
+          <circle className="circle-background" cx="50%" cy="50%" r={radius} />
+          <circle
+            className="circle-progress"
+            cx="50%"
+            cy="50%"
+            r={radius}
+            strokeDasharray={circumference}
+            strokeDashoffset={dashoffset}
+          />
+        </svg>
+      </ProgressPrimitive.Indicator>
     </ProgressPrimitive.Root>
   );
 });

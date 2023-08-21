@@ -295,10 +295,9 @@ const Page = () => {
                   language="jsx"
                   style={dracula}
                   customStyle={{
-                    height: "350px",
-                    width: "800px",
-                    overflowX: "auto",
+                    maxHeight: "400px",
                     overflowY: "auto",
+                    overflowX: "auto",
                   }}
                 >
                   {previewCode}

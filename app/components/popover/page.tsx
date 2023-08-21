@@ -154,6 +154,7 @@ const Page = () => {
         </Tabs>
       </div>
 
+      {/* Example */}
       <PreviewLayout>
         <div>
           <div className="flex flex-col gap-2 justify-center items-center">
@@ -172,7 +173,7 @@ const Page = () => {
         <div className="mt-16">
           <div className="flex flex-col gap-2 justify-center items-center">
             <p className="text-gray-800 ">
-              Popover with input and smaller width
+              Popover with input and with increased width
             </p>
             <Popover>
               <PopoverTrigger>

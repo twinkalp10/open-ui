@@ -11,6 +11,8 @@ import TitleLayout from "@/components/TitleLayout";
 import PreviewLayout from "@/components/ExamplesLayout";
 import { Input } from "@/components/Input";
 import CodeBlock from "@/components/CodeLayout";
+import APIRefLayout from "@/components/APIRefLayout";
+import DependencyLayout from "@/components/DependencyLayout";
 
 const Items = [
   { label: "Home", path: "/" },
@@ -103,6 +105,9 @@ const Page = () => {
         subtitle="A popover is a transient view that shows up on top of a content on the screen when a user clicks on a control button or within a defined area."
       />
 
+      {/* API Reference */}
+      <APIRefLayout APIref="https://www.radix-ui.com/primitives/docs/components/popover#api-reference" />
+
       {/* Tabs */}
       <div className="mt-12 max-w-3xl md:max-w-4xl sm:max-w-2xl">
         <p className="text-gray-800">Preview</p>
@@ -183,6 +188,9 @@ const Page = () => {
           </div>
         </div>
       </PreviewLayout>
+
+      {/* Dependencies */}
+      <DependencyLayout dependency="npm install @radix-ui/react-popover" />
 
       {/* Code */}
       <CodeBlock code={code} />

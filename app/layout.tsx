@@ -25,7 +25,7 @@ export default function RootLayout({
           </div>
           <div className="flex-1 pl-72 overflow-x-hidden h-screen">
             <Nav />
-            <div className="mt-3 ml-12 ">{children}</div>
+            <div className="mt-8 ml-8">{children}</div>
           </div>
         </div>
       </body>

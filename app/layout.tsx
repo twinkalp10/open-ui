@@ -23,9 +23,9 @@ export default function RootLayout({
           <div>
             <Sidebar />
           </div>
-          <div className="flex-1 pl-72 overflow-x-hidden p-0 m-0">
+          <div className="flex-1 pl-72 overflow-x-hidden h-screen">
             <Nav />
-            <div className="mt-3 ml-4 h-screen w-full">{children}</div>
+            <div className="mt-3 ml-12 ">{children}</div>
           </div>
         </div>
       </body>

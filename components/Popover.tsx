@@ -24,19 +24,19 @@ const PopoverContent = React.forwardRef<
         align={align}
         sideOffset={sideOffset}
         className={cn(
-          "z-50 w-72 rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
+          "z-50 w-72 p-7 rounded-md border bg-white text-gray-800 shadow-md outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
           className
         )}
         {...props}
       >
         {children}
         <PopoverClose
-          className=" h-[12px] w-[12px] absolute top-[5px] right-[5px] hover:shadow-md outline-none cursor-default"
+          className=" h-4 w-4 absolute top-2 right-2 hover:shadow-md outline-none cursor-pointer"
           aria-label="Close"
         >
           <XMarkIcon />
         </PopoverClose>
-        <PopoverArrow className="fill-gray-50 h-3" />
+        <PopoverArrow className="fill-gray-100 h-3" />
       </PopoverPrimitive.Content>
     </PopoverPrimitive.Portal>
   )

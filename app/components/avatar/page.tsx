@@ -159,11 +159,11 @@ const Page = () => {
         <Separator className="max-w-[60px] mb-5 mt-1" />
         <Tabs
           defaultValue="code"
-          className="bg-white py-4 border border-gray-100 shadow sm:rounded-lg max-w-4xl"
+          className="bg-white py-4 border border-gray-100 shadow sm:rounded-lg max-w-4xl "
         >
-          <TabsList className="grid grid-cols-2">
+          <TabsList className="flex w-28 justify-between items-center gap-5 pl-4">
             <TabsTrigger value="preview" variant="underline">
-              preview
+              UI
             </TabsTrigger>
             <TabsTrigger value="code" variant="underline">
               Code

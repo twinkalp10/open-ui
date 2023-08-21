@@ -4,7 +4,7 @@ import React from "react";
 import { Cog6ToothIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
 import Breadcrumbs from "@/components/Breadcrumb";
 import TitleLayout from "@/components/TitleLayout";
-import PreviewLayout from "@/components/PreviewLayout";
+import PreviewLayout from "@/components/ExamplesLayout";
 import CodeBlock from "@/components/CodeLayout";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/Tab";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
@@ -173,17 +173,20 @@ const Page = () => {
               </div>
             </TabsContent>
             <TabsContent value="code">
-              <SyntaxHighlighter
-                language="jsx"
-                style={dracula}
-                customStyle={{
-                  height: "350px",
-                  width: "800px",
-                  overflow: "auto",
-                }}
-              >
-                {previewCode}
-              </SyntaxHighlighter>
+              <div className="w-72 md:w-[900px] sm:w-64 max-w-[600px]">
+                <SyntaxHighlighter
+                  language="jsx"
+                  style={dracula}
+                  customStyle={{
+                    height: "350px",
+                    width: "800px",
+                    overflowX: "auto",
+                    overflowY: "auto",
+                  }}
+                >
+                  {previewCode}
+                </SyntaxHighlighter>
+              </div>
             </TabsContent>
           </div>
         </Tabs>

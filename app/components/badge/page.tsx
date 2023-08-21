@@ -2,7 +2,7 @@
 import Badge from "@/components/Badge";
 import Breadcrumbs from "@/components/Breadcrumb";
 import CodeBlock from "@/components/CodeLayout";
-import PreviewLayout from "@/components/PreviewLayout";
+import PreviewLayout from "@/components/ExamplesLayout";
 import TitleLayout from "@/components/TitleLayout";
 import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/Tab";

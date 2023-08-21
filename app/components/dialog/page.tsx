@@ -18,8 +18,10 @@ import { Label } from "@/components/Label";
 import React from "react";
 import Breadcrumbs from "@/components/Breadcrumb";
 import TitleLayout from "@/components/TitleLayout";
-import PreviewLayout from "@/components/PreviewLayout";
+import PreviewLayout from "@/components/ExamplesLayout";
 import CodeBlock from "@/components/CodeLayout";
+import APIRefLayout from "@/components/APIRefLayout";
+import DependencyLayout from "@/components/DependencyLayout";
 
 const Items = [
   { label: "Home", path: "/" },
@@ -216,13 +218,16 @@ const Page = () => {
         subtitle="A dialog is a type of modal window that appears in front of app content to provide information or ask for a decision."
       />
 
+      {/* API Reference */}
+      <APIRefLayout APIref="https://www.radix-ui.com/primitives/docs/components/dialog#api-reference" />
+
       {/* Tabs */}
-      <div className="mt-12">
+      <div className="mt-12 max-w-3xl md:max-w-4xl sm:max-w-2xl">
         <p className="text-gray-800">Preview</p>
         <Separator className="max-w-[60px] mb-5 mt-1" />
         <Tabs
           defaultValue="code"
-          className="bg-white py-4 border border-gray-100 shadow sm:rounded-lg max-w-4xl"
+          className="bg-white py-4 border border-gray-100 shadow sm:rounded-lg"
         >
           <TabsList className="flex w-28 justify-between items-center gap-5 pl-4">
             <TabsTrigger value="preview" variant="underline">
@@ -267,17 +272,19 @@ const Page = () => {
               </Dialog>
             </TabsContent>
             <TabsContent value="code">
-              <SyntaxHighlighter
-                language="jsx"
-                style={dracula}
-                customStyle={{
-                  height: "350px",
-                  width: "800px",
-                  overflow: "auto",
-                }}
-              >
-                {previewCode}
-              </SyntaxHighlighter>
+              <div className="w-72 md:w-[900px] sm:w-64 max-w-[600px]">
+                <SyntaxHighlighter
+                  language="jsx"
+                  style={dracula}
+                  customStyle={{
+                    maxHeight: "400px",
+                    overflowY: "auto",
+                    overflowX: "auto",
+                  }}
+                >
+                  {previewCode}
+                </SyntaxHighlighter>
+              </div>
             </TabsContent>
           </div>
         </Tabs>
@@ -317,6 +324,9 @@ const Page = () => {
           </DialogContent>
         </Dialog>
       </PreviewLayout>
+
+      {/* Dependencies */}
+      <DependencyLayout dependency="npm install @radix-ui/react-dialog" />
 
       {/* Code */}
       <CodeBlock code={code} />

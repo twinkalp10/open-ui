@@ -25,15 +25,14 @@ const CodeBlock = ({ code }: codeBlockProps) => {
         Copy and paste the following code into your project.
       </p>
       <Separator className="max-w-[396px] mb-5 mt-1" />
-      <div className="relative">
-        <SyntaxHighlighter
-          language="jsx"
-          style={dracula}
-          customStyle={{ maxHeight: "700px", overflowY: "auto" }}
-        >
-          {code}
-        </SyntaxHighlighter>
-      </div>
+
+      <SyntaxHighlighter
+        language="jsx"
+        style={dracula}
+        customStyle={{ maxHeight: "700px", overflowY: "auto" }}
+      >
+        {code}
+      </SyntaxHighlighter>
     </div>
   );
 };

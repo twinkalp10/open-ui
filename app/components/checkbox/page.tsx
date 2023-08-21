@@ -10,7 +10,7 @@ import { MinusSmallIcon, CheckIcon } from "@heroicons/react/24/solid";
 
 import Breadcrumbs from "@/components/Breadcrumb";
 import TitleLayout from "@/components/TitleLayout";
-import PreviewLayout from "@/components/PreviewLayout";
+import PreviewLayout from "@/components/ExamplesLayout";
 import DependencyLayout from "@/components/DependencyLayout";
 import APIRefLayout from "@/components/APIRefLayout";
 import CodeBlock from "@/components/CodeLayout";
@@ -160,17 +160,20 @@ const Page = () => {
               </div>
             </TabsContent>
             <TabsContent value="code">
-              <SyntaxHighlighter
-                language="jsx"
-                style={dracula}
-                customStyle={{
-                  height: "350px",
-                  width: "800px",
-                  overflow: "auto",
-                }}
-              >
-                {previewCode}
-              </SyntaxHighlighter>
+              <div className="w-72 md:w-[900px] sm:w-64 max-w-[600px]">
+                <SyntaxHighlighter
+                  language="jsx"
+                  style={dracula}
+                  customStyle={{
+                    height: "350px",
+                    width: "800px",
+                    overflowX: "auto",
+                    overflowY: "auto",
+                  }}
+                >
+                  {previewCode}
+                </SyntaxHighlighter>
+              </div>
             </TabsContent>
           </div>
         </Tabs>

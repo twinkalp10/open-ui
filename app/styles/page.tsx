@@ -60,7 +60,7 @@ const page = () => {
         <p className="text-gray-800">
           In scenarios where components exhibit state, that state is exposed
           through data attributes. For instance, when an Accordion Item is
-          expanded, it includes a <b>data-state="open"</b> attribute.
+          expanded, it includes a <b>data-state=&quot;open&quot;</b> attribute.
         </p>
       </div>
     </div>

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Nav from "@/layouts/Nav";
 import Sidebar from "@/layouts/Sidebar";
+import Footer from "@/layouts/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +26,9 @@ export default function RootLayout({
           </div>
           <div className="flex-1 pl-72 overflow-x-hidden h-screen">
             <Nav />
-            <div className="mt-8 ml-8">{children}</div>
+            <div className="p-6 mb-32">{children}</div>
+
+            <Footer />
           </div>
         </div>
       </body>

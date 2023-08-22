@@ -1,14 +1,16 @@
+"use client";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/Accordion";
+import Link from "next/link";
 import React from "react";
 
 export default function Home() {
   return (
-    <div className="flex flex-col space-y-14 font-inter max-w-3xl md:max-w-5xl mt-8 ml-8 mb-32">
+    <div className="flex flex-col space-y-14 font-inter max-w-3xl md:max-w-5xl mt-8 ml-8 mb-8">
       <div className="flex flex-col space-y-2">
         <h1 className="text-5xl font-semibold tracking-normal leading-tight">
           An open-source <br /> UI component library.

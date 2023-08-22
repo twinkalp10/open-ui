@@ -11,10 +11,10 @@ npm install lucide-react
 
 const page = () => {
   return (
-    <div className="flex flex-col space-y-14 font-inter max-w-3xl md:max-w-5xl mt-8 ml-8 mb-32">
+    <div className="flex flex-col space-y-14 font-inter max-w-3xl md:max-w-5xl mt-8 ml-8 mb-8">
       <div className="flex flex-col space-y-7">
         <div className="flex flex-col space-y-2">
-          <h1 className="text-xl font-bold">Styles</h1>
+          <h1 className="text-2xl font-bold">Styles</h1>
           <p className="text-gray-800">
             Radix Primitives are designed without any predefined styles and are
             compatible with any styling solution, empowering you with full

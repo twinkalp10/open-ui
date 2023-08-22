@@ -26,7 +26,7 @@ export default function RootLayout({
           </div>
           <div className="flex-1 pl-72 overflow-x-hidden h-screen">
             <Nav />
-            <div className="p-6 mb-32">{children}</div>
+            <div className="p-6">{children}</div>
 
             <Footer />
           </div>

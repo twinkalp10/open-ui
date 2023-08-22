@@ -6,7 +6,7 @@ import { Separator } from "@/components/Separator";
 
 const Footer = () => {
   return (
-    <footer className="font-inter w-full fixed bottom-0 z-50 shadow-sm bg-white">
+    <footer className="font-inter w-full  z-50 bg-white">
       <Separator orientation="horizontal" className="bg-gray-200" />
       <div className="flex flex-col max-w-6xl md:space-x-8 px-12 gap-4 items-center md:flex-row md:justify-between my-6">
         <div>@2023 built by Twinkal Patel</div>

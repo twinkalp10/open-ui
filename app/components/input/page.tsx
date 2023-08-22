@@ -268,24 +268,3 @@ const Page = () => {
 };
 
 export default Page;
-
-<div>
-  <Label htmlFor="email">Email</Label>
-  <Input
-    placeholder="Email"
-    className="w-80"
-    icon={
-      <TooltipProvider>
-        <Tooltip>
-          <TooltipTrigger>
-            <QuestionMarkCircleIcon className="h-4 w-4" />
-          </TooltipTrigger>
-          <TooltipContent side="right" sideOffset={5} className="bg-violet-300">
-            <p>Add to library</p>
-            <TooltipArrow className="fill-violet-300" />
-          </TooltipContent>
-        </Tooltip>
-      </TooltipProvider>
-    }
-  />
-</div>;

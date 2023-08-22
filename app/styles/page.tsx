@@ -23,7 +23,7 @@ const page = () => {
         </div>
         <h1 className="text-xl font-bold">Icons</h1>
         <p className="text-gray-800">
-          For displaying icons that align with specific requirements, I've
+          For displaying icons that align with specific requirements, I&apos;ve
           incorporated icons from alternative sources. Feel free to use icons
           from any source that suits your preferences.
         </p>
@@ -37,16 +37,18 @@ const page = () => {
           </SyntaxHighlighter>
         </div>
         <p className="text-gray-800">
-          I've utilized icons from Radix Icons, Heroicons, and Lucide React. To
-          learn more about how to employ these icons, you can visit their
-          official websites for detailed guidance on usage and integration.
+          I&apos;ve utilized icons from Radix Icons, Heroicons, and Lucide
+          React. To learn more about how to employ these icons, you can visit
+          their official websites for detailed guidance on usage and
+          integration.
         </p>
         <h1 className="text-xl font-bold">Functional Styles:</h1>
         <p className="text-gray-800">
           You have complete authority over every facet of styling, even
-          functional styles. Take, for instance, a Dialog Overlay, which won't
-          inherently span the entire viewport. It's your prerogative to
-          incorporate these styles along with any presentation styles.
+          functional styles. Take, for instance, a Dialog Overlay, which
+          won&apos;t inherently span the entire viewport. It&apos;s your
+          prerogative to incorporate these styles along with any presentation
+          styles.
         </p>
         <h1 className="text-xl font-bold">Classes:</h1>
         <p className="text-gray-800">

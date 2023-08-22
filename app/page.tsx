@@ -29,8 +29,8 @@ export default function Home() {
           </p>
         </div>
         <p>
-          It's not a component library. instead, it's a collection of reusable
-          components ready for you to seamlessly integrate into your
+          It&apos;s not a component library. instead, it&apos;s a collection of
+          reusable components ready for you to seamlessly integrate into your
           applications by simply copying and pasting.
         </p>
 
@@ -38,7 +38,7 @@ export default function Home() {
           <b>What do you mean by not a component library?</b>
         </p>
         <p>
-          It's important to clarify that these components are not part of a
+          It&apos;s important to clarify that these components are not part of a
           traditional component library that you install as a dependency through
           tools like npm.
         </p>
@@ -50,7 +50,7 @@ export default function Home() {
         <p>
           <i>
             The beauty lies in the fact that the code becomes entirely yours to
-            customize according to your project's unique requirements.
+            customize according to your project&apos;s unique requirements.
           </i>
         </p>
       </div>

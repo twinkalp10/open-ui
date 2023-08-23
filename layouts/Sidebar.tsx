@@ -11,8 +11,8 @@ const NavMenu = [
     path: "/",
   },
   {
-    label: "Styles",
-    path: "/styles",
+    label: "Installation",
+    path: "/installation",
   },
   {
     label: "Examples",

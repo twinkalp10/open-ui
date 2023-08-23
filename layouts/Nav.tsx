@@ -41,9 +41,9 @@ const Nav = () => {
             </Link>
           ))}
         </div>
-        <div>
-          <GitHubLogoIcon className=" w-6 h-6" />
-        </div>
+        <Link href="https://github.com/twinkalp10/open-ui" target="_blank">
+          <GitHubLogoIcon className="w-6 h-6" />
+        </Link>
       </div>
     </header>
   );

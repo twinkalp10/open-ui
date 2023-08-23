@@ -3,14 +3,15 @@ import React from "react";
 
 const CardStyle = () => {
   return (
-    <div className="">
+    <div className="flex flex-col gap-10">
       <div className="flex flex-col gap-3 ">
         <p className="text-xl font-semibold">Card Design</p>
         <p className="text-gray-600">
-          This Card has been designed with Card component and its
-          sub-components. The Card component is a composition of other
-          components like CardHeader, CardContent, CardTitle, CardDescription.
-          The Select component is also used in this Card.
+          This card has been created using the Card component and its associated
+          sub-components. The Card component is constructed by combining various
+          other elements such as CardHeader, CardContent, CardTitle, and
+          CardDescription. Additionally, the Select component has been
+          integrated into this card design.
         </p>
         <ul className="flex flex-col gap-2 list-disc ml-8 text-gray-600">
           <li>Card</li>

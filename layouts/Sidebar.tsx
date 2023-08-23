@@ -55,7 +55,7 @@ const sidebarmenu = [
   { name: "Skeleton", path: "/components/skeleton" },
   { name: "Slider", path: "/components/slider" },
   { name: "Switch", path: "/components/switch" },
-  { name: "Table", path: "/components/table" },
+  // { name: "Table", path: "/components/table" },
   { name: "Tabs", path: "/components/tabs" },
   { name: "Textarea", path: "/components/textarea" },
   // { name: "Toast", path: "/components/toast" },

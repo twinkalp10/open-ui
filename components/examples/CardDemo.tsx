@@ -35,7 +35,7 @@ const CardDemo = () => {
               readOnly
               className="w-64"
             />
-            <Button variant="secondary">Copy</Button>
+            <Button variant="default">Copy</Button>
           </div>
           <Separator className="my-4 bg-gray-300" />
           <div className="space-y-4">

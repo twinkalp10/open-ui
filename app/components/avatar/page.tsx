@@ -129,8 +129,8 @@ const App = () => {
                   <DotFilledIcon className="text-green-500 w-3 h-3 bottom-0 left-4 absolute" />
                 }
               />
-              <AvatarFallback>TP</AvatarFallback>
-            </AvatarRoot>
+          <AvatarFallback>TP</AvatarFallback>
+      </AvatarRoot>
     </div>
     );
   };

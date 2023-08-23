@@ -76,7 +76,7 @@ const Sidebar = () => {
               OPEN
             </div>
             <div className="text-gray-600 font-light text-2xl font-serif">
-              AI
+              UI
             </div>
           </div>
         </div>

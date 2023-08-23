@@ -69,7 +69,17 @@ const Sidebar = () => {
   return (
     <div className="w-72 pl-8 max-h-screen border-r-2 border-gray-200 group overflow-y-hidden fixed top-0 left-0">
       <div className="p-4 sticky top-0 z-50 bg-white">
-        <CornerTopRightIcon className="bg-black rounded-md text-white w-6 h-6" />
+        <div className="flex justify-start items-center gap-4">
+          <CornerTopRightIcon className="bg-black rounded-md text-white w-6 h-6" />
+          <div className="flex items-center">
+            <div className="text-black font-extrabold text-2xl mr-2 font-serif">
+              OPEN
+            </div>
+            <div className="text-gray-600 font-light text-2xl font-serif">
+              AI
+            </div>
+          </div>
+        </div>
       </div>
       <div className="overflow-y-auto">
         <div className="px-4 py-4 h-[calc(100vh-60px)] ">

@@ -221,12 +221,15 @@ const Page = () => {
       {/* API Reference */}
       <APIRefLayout APIref="https://www.radix-ui.com/primitives/docs/components/dialog#api-reference" />
 
+      {/* Dependencies */}
+      <DependencyLayout dependency="npm install @radix-ui/react-dialog" />
+
       {/* Tabs */}
       <div className="mt-12 max-w-3xl md:max-w-4xl sm:max-w-2xl">
         <p className="text-gray-800">Preview</p>
         <Separator className="max-w-[60px] mb-5 mt-1" />
         <Tabs
-          defaultValue="code"
+          defaultValue="preview"
           className="bg-white py-4 border border-gray-100 shadow sm:rounded-lg"
         >
           <TabsList className="flex w-28 justify-between items-center gap-5 pl-4">
@@ -324,9 +327,6 @@ const Page = () => {
           </DialogContent>
         </Dialog>
       </PreviewLayout>
-
-      {/* Dependencies */}
-      <DependencyLayout dependency="npm install @radix-ui/react-dialog" />
 
       {/* Code */}
       <CodeBlock code={code} />

@@ -153,12 +153,15 @@ const Page = () => {
       {/* API Reference */}
       <APIRefLayout APIref="https://www.radix-ui.com/primitives/docs/components/avatar#api-reference" />
 
+      {/* Dependencies */}
+      <DependencyLayout dependency="npm install @radix-ui/react-avatar" />
+
       {/* Tabs */}
       <div className="mt-12">
         <p className="text-gray-800">Preview</p>
         <Separator className="max-w-[60px] mb-5 mt-1" />
         <Tabs
-          defaultValue="code"
+          defaultValue="preview"
           className="bg-white py-4 border border-gray-100 shadow sm:rounded-lg max-w-4xl "
         >
           <TabsList className="flex w-28 justify-between items-center gap-5 pl-4">
@@ -269,9 +272,6 @@ const Page = () => {
           </div>
         </div>
       </PreviewLayout>
-
-      {/* Dependencies */}
-      <DependencyLayout dependency="npm install @radix-ui/react-avatar" />
 
       {/* Code */}
       <CodeBlock code={code} />

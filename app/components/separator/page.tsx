@@ -84,12 +84,15 @@ const Page = () => {
       {/* API Reference */}
       <APIRefLayout APIref="https://www.radix-ui.com/primitives/docs/components/separator#api-reference" />
 
+      {/* Code */}
+      <CodeBlock code={code} />
+
       {/* Tabs */}
       <div className="mt-12 max-w-3xl md:max-w-4xl sm:max-w-2xl">
         <p className="text-gray-800">Preview</p>
         <Separator className="max-w-[60px] mb-5 mt-1" />
         <Tabs
-          defaultValue="code"
+          defaultValue="preview"
           className="bg-white py-4 border border-gray-100 shadow sm:rounded-lg"
         >
           <TabsList className="flex w-28 justify-between items-center gap-5 pl-4">
@@ -160,9 +163,6 @@ const Page = () => {
 
       {/* Dependencies */}
       <DependencyLayout dependency="npm install @radix-ui/react-separator" />
-
-      {/* Code */}
-      <CodeBlock code={code} />
     </div>
   );
 };
